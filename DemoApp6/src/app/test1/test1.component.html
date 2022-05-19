@@ -1,0 +1,30 @@
+<p>test1 works!</p>
+
+<input #inp>
+<button (click)="printText(inp.value)">Print</button>
+
+<input #inp1>
+<button (click)="printText(inp1.value)">submit</button>
+
+<p #para1>I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+</p>
+
+<button (click)="printPara(para1.innerText)">Submit</button>
+
+<p #para2>I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+    I learn Web.I learn Web.I learn Web.
+</p>
+
+<button (click)="printPara1(para2)">Submit</button>
+
+<table (click)="printTable(num)">
+    <tr>
+        <td>Id</td>
+        <td #num>1022</td>
+    </tr>
+</table>

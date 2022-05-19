@@ -1,0 +1,31 @@
+<p>test2 works!</p>
+<label for="">id</label>
+<input type="number" #inp>
+<button (click)="find(inp.value)">submit</button>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>PRICE</th>
+        <th>CATEGORY</th>
+        <th>DESCRIPTION</th>
+        <th>USERNAME</th>
+        <th>CREATEDDATE</th>
+        <th>MODIFIEDDATE</th>
+        <th>STATUS</th>
+    </tr>
+    <tr *ngFor="let a of Advertise">
+        <td>{{a.id}}</td>
+        <td>{{a.title}}</td>
+        <td>{{a.price}}</td>
+        <td>{{a.category}}</td>
+        <td>{{a.description}}</td>
+        <td>{{a.username}}</td>
+        <td>{{a.createdate}}</td>
+        <td>{{a.modifieddate}}</td>
+        <td>{{a.status}}</td>
+    </tr>
+</table>
+
+{{Advertise | json}}

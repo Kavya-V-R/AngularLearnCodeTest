@@ -1,0 +1,71 @@
+<p>test4 works!</p>
+<form [formGroup]="simpleForm">
+    <table>
+        <tr>
+            <td><label>ROLLNO</label></td>
+            <input formControlName="myrollno">
+            <div style="color: red;" *ngIf="simpleForm.get('myrollno').touched && simpleForm.get('myrollno').invalid">Roll Number is Mandatory</div>
+        </tr>
+        <tr>
+            <td><label>NAME</label></td>
+            <input formControlName="myname">
+            <div style="color: red;" 
+            *ngIf="simpleForm.get('myname').touched 
+            && simpleForm.get('myname').invalid 
+            && simpleForm.get('myname').errors?.minlength">
+                name should be min 5 characters</div>
+
+                <div style="color: red;" 
+                *ngIf="simpleForm.get('myname').touched 
+                && simpleForm.get('myname').invalid 
+                && simpleForm.get('myname').errors?.maxlength">
+                name should be max 15 characters</div>       
+             </tr>
+        <tr>
+            <td><label>MARKS1</label></td>
+            <input formControlName="mymarks1">
+            <div style="color: red;" 
+            *ngIf="simpleForm.get('mymarks1').touched 
+            && simpleForm.get('mymarks1').invalid 
+            && simpleForm.get('mymarks1').errors?.min">
+                0 is the min marks</div>
+
+                <div style="color: red;" 
+                *ngIf="simpleForm.get('mymarks1').touched 
+                && simpleForm.get('mymarks1').invalid 
+                && simpleForm.get('mymarks1').errors?.max">
+                    100 is the max marks</div>
+        </tr>
+        <tr>
+            <td><label>MARKS2</label></td>
+            <input formControlName="mymarks2">
+            <div style="color: red;" 
+            *ngIf="simpleForm.get('mymarks2').touched 
+            && simpleForm.get('mymarks2').invalid 
+            && simpleForm.get('mymarks2').errors?.min">
+                0 is the min marks</div>
+
+                <div style="color: red;" 
+                *ngIf="simpleForm.get('mymarks2').touched 
+                && simpleForm.get('mymarks2').invalid 
+                && simpleForm.get('mymarks2').errors?.max">
+                    100 is the max marks</div>
+        </tr>
+        <tr>
+            <td><label>MARKS3</label></td>
+            <input formControlName="mymarks3">
+            <div style="color: red;" 
+            *ngIf="simpleForm.get('mymarks3').touched 
+            && simpleForm.get('mymarks3').invalid 
+            && simpleForm.get('mymarks3').errors?.min">
+                0 is the min marks</div>
+
+                <div style="color: red;" 
+                *ngIf="simpleForm.get('mymarks3').touched 
+                && simpleForm.get('mymarks3').invalid 
+                && simpleForm.get('mymarks3').errors?.max">
+                    100 is the max marks</div>
+        </tr>
+
+    </table>
+</form>

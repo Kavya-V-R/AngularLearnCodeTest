@@ -1,0 +1,31 @@
+<p>test works!</p>
+
+<form #personForm="ngForm">
+    {{personForm.value | json}}
+    <br>
+    {{person | json}}
+<table>
+    <tr>
+        <td><label>ID</label></td>
+        <td><input [(ngModel)]="person.id" name="txtId"></td>
+    </tr>
+    <tr>
+        <td><label>NAME</label></td>
+        <td><input [(ngModel)]="person.name" name="txtName"> </td>
+    </tr>
+    <tr>
+        <td><label>SALARY</label></td>
+        <td><input [(ngModel)]="person.salary" name="txtSalary"></td>
+    </tr>
+    <tr>
+        <td><label>GRADE</label></td>
+        <td><input [(ngModel)]="person.grade" name="txtGrade"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="printInput()">ADD</button>
+        </td>
+    </tr>
+</table>
+</form>
+

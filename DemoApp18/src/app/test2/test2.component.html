@@ -1,0 +1,71 @@
+<p>test2 works!</p>
+{{ studentForm.value | json }}
+
+
+<form #studentForm="ngForm">
+
+    <table>
+        <tr>
+            <td><label>ID</label></td>
+            <td>
+                <input 
+                required
+                #stuid="ngModel"
+                name="txtid"
+                [(ngModel)]="id"
+                >
+                <div *ngIf="stuid.touched && stuid.invalid">ID is Mandatory</div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>NAME</label></td>
+            <td>
+                <input minlength="5"
+                required
+                #stuname="ngModel"
+                name="txtname"
+                [(ngModel)]="name"
+                >
+                <div *ngIf="stuname.touched && stuname.invalid">Name should contain minimum 5 char</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Marks1</label></td>
+            <td>
+                <input min="0" max="100"
+                type="number"
+                #stumarks1="ngModel"
+                name="txtmarks1"
+                [(ngModel)]="marks1"
+                >
+                <div *ngIf="stumarks1.touched && stumarks1.invalid">marks should be between 0 and 100</div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Marks2</label></td>
+            <td>
+                <input min="0" max="100"
+                type="number"
+                #stumarks2="ngModel"
+                name="txtmarks2"
+                [(ngModel)]="marks2"
+                >
+                <div *ngIf="stumarks2.touched && stumarks2.invalid">marks  should be between 0 and 100</div>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Marks3</label></td>
+            <td>
+                <input min="0" max="100"
+                type="number"
+                #stumarks3="ngModel"
+                name="txtmarks3"
+                [(ngModel)]="marks3"
+                >
+                <div *ngIf="stumarks3.touched && stumarks3.invalid">marks  should be between 0 and 100</div>
+            </td>
+        </tr>
+
+    </table>
+</form>

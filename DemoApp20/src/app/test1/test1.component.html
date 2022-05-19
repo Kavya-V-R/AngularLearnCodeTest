@@ -1,0 +1,25 @@
+<p>test1 works!</p>
+
+<form [formGroup]="categoryForm">
+    <table>
+        <tr>
+            <td><label>NAME</label></td>
+            <input formControlName="categoryname">
+            <div style="color: red;" *ngIf="categoryForm.get('categoryname').touched && 
+            categoryForm.get('categoryname').invalid">Name is mandatory</div>
+        </tr>
+
+        <tr>
+            <td><label>DESCRIPTION</label></td>
+            <input formControlName="categorydescription">
+            <div style="color: red;" *ngIf="categoryForm.get('categorydescription').touched && 
+            categoryForm.get('categorydescription').invalid">description is mandatory</div>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button (click)="add()">ADD</button>
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,30 @@
+<p>add works!</p>
+<form [formGroup]="empForm">
+    {{empForm.value | json}}
+    <table>
+        <tr>
+            <td><label>ID</label></td>
+            <td><input formControlName="id"></td>
+        </tr>
+
+        <tr>
+            <td><label>NAME</label></td>
+            <td><input formControlName="name"></td>
+        </tr>
+        <tr>
+            <td><label>SALARY</label></td>
+            <td><input formControlName="salary"></td>
+        </tr>
+
+        <tr>
+            <td><label>GRADE</label></td>
+            <td><input formControlName="grade"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="button" (click)="add()">ADD</button>
+            </td>
+        </tr>
+    </table>
+</form>
